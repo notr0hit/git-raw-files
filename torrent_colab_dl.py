@@ -4,10 +4,10 @@ import importlib, urllib.request, os
 from IPython.display import clear_output
 import time
 
-if not os.path.exists("/root/.ipython/peeklab.py"):
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/ImPeekaboo/mytools/main/source/peeklab.py", "/root/.ipython/peeklab.py")
+if not os.path.exists("/root/.ipython/torrent_colab_util.py"):
+    urllib.request.urlretrieve("https://raw.githubusercontent.com/notr0hit/git-raw-files/master/torrent_colab_util.py", "/root/.ipython/torrent_colab_util.py")
 
-from peeklab import installLX
+from torrent_colab_util import installLX
 
 if importlib.util.find_spec("libtorrentx") is None:
     installLX()
@@ -19,7 +19,7 @@ clear_output()
 !{command}
 
 # take a break
-time.sleep(5)
+time.sleep(1)
 
 # copy most recent added file to drive
 import glob
